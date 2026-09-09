@@ -5,24 +5,23 @@
 }
 
 :root {
-  --background: #f8f4ea;
+  --background: #eef5ee;
   --paper: #fffefb;
-  --paper-soft: #f2ebe0;
-  --text: #1b211c;
-  --text-soft: #59645c;
-  --text-muted: #767c70;
-  --line: #d8d2c4;
-  --sage: #82987b;
-  --sage-dark: #485b44;
-  --sage-soft: #ccd3c0;
-  --sage-ink: #142116;
-  --clay: #b58461;
-  --clay-light: #d8aa84;
-  --graphite: #1f221d;
-  --graphite-soft: #303428;
-  --sand: #e8d9bf;
-  --paper-shadow: rgba(27, 33, 28, 0.12);
-  --serif: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  --paper-soft: #eaf0e7;
+  --text: #dce9dd;
+  --text-soft: #b4c0ab;
+  --text-muted: #a8b1a3;
+  --line: #8aa184;
+  --sage: #acdfb4;
+  --sage-dark: #9cc293;
+  --sage-soft: #d6e2d9;
+  --sage-ink: #071a10;
+  --clay: #bba779;
+  --clay-light: #d4af68;
+  --graphite: #071a11;
+  --graphite-soft: #112116;
+  --sand: #caa86c;
+  --paper-shadow: rgba(152, 219, 180, 0.16);
   --sans: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --mono: "Roboto Mono", "Courier New", monospace;
   --max-width: 1240px;
@@ -36,9 +35,10 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at 70% 10%, rgba(133, 142, 128, 0.12), transparent 20%),
-    radial-gradient(circle at 15% 80%, rgba(150, 128, 104, 0.16), transparent 16%),
-    var(--background);
+    radial-gradient(circle at 78% 7%, rgba(172, 223, 180, 0.18), transparent 16%),
+    radial-gradient(circle at 19% 88%, rgba(212, 175, 104, 0.14), transparent 12%),
+    radial-gradient(circle at 58% 68%, rgba(0, 146, 107, 0.10), transparent 24%),
+    linear-gradient(135deg, var(--graphite) 0%, var(--graphite-soft) 100%);
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.6;
@@ -49,23 +49,24 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(var(--paper-shadow) 0.8px, transparent 0.8px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(var(--paper-shadow) 0.9px, transparent 0.9px), linear-gradient(90deg, transparent, rgba(172, 223, 180, 0.1), transparent);
+  background-size: 24px 24px, 120px 120px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
-  opacity: 0.3;
+  opacity: 0.85;
 }
 
 body::after {
   content: "";
   position: fixed;
-  width: 420px;
-  height: 420px;
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
   border: 1px solid var(--line);
-  left: -180px;
-  top: -180px;
+  left: -280px;
+  top: -260px;
   filter: blur(30px);
-  opacity: 0.6;
+  box-shadow: 0 0 80px rgba(172, 223, 180, 0.18) inset;
+  opacity: 0.8;
 }
 
 @keyframes fadeRise {
@@ -114,6 +115,8 @@ body::after {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+  background: transparent;
+  position: relative;
 }
 
 .site-header {
@@ -125,9 +128,9 @@ body::after {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: color-mix(in srgb, var(--background) 90%, transparent);
+  background-color: color-mix(in srgb, var(--graphite) 88%, transparent);
   backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 1px 0 rgba(172,223,180,0.34), 0 0 34px rgba(172,223,180,0.05);
 }
 
 .brand {
@@ -173,6 +176,7 @@ body::after {
   font-family: var(--serif);
   font-size: 20px;
   font-weight: 700;
+  color: var(--text);
 }
 
 .brand-role {
@@ -286,6 +290,20 @@ body::after {
   display: flex;
   align-items: center;
   animation: fadeRise 780ms ease both;
+  background-image: linear-gradient(135deg, transparent, rgba(172,223,180,0.04));
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sage), transparent);
+  left: 0;
+  top: 80px;
+  box-shadow: 0 0 20px var(--sage);
+  animation: traceLine 900ms ease-out both;
 }
 
 .hero-grid {
@@ -343,6 +361,7 @@ body::after {
   line-height: 1.7;
   max-width: 720px;
   margin: 0 0 34px;
+  text-shadow: 0 0 16px rgba(172, 223, 180, 0.12);
 }
 
 .hero-actions {
@@ -425,9 +444,10 @@ body::after {
   width: min(440px, 100%);
   padding: 28px;
   border: 1px solid var(--line);
-  background-color: rgba(255, 254, 251, 0.46);
+  background-color: rgba(12, 32, 21, 0.48);
   position: relative;
-  box-shadow: 0 32px 110px var(--paper-shadow);
+  box-shadow: 0 0 0 1px rgba(172,223,180,0.2), 0 32px 110px var(--paper-shadow), inset 0 0 20px rgba(172,223,180,0.08);
+  overflow: hidden;
 }
 
 .scan-frame::before,
@@ -453,6 +473,21 @@ body::after {
   border-left: none;
   right: -10px;
   bottom: -10px;
+}
+
+.scan-sweep {
+  position: absolute;
+  left: -30%;
+  right: -30%;
+  top: 12%;
+  height: 40%;
+  background-image: repeating-linear-gradient(115deg, transparent, transparent 7px, rgba(172,223,180,0.045) 8px);
+  transform: rotate(8deg);
+  opacity: 0.92;
+  pointer-events: none;
+  border-top: 1px solid var(--sage-soft);
+  border-bottom: 1px solid var(--sage-soft);
+  animation: scanSweep 4s linear infinite;
 }
 
 .scan-frame-top {
@@ -542,6 +577,16 @@ body::after {
   padding: 30px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.signal-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.22;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,1), transparent 100%);
 }
 
 .signal-map__row {
@@ -810,14 +855,29 @@ body::after {
 }
 
 .project-card {
-  background-color: color-mix(in srgb, var(--paper) 90%, transparent);
+  background-color: color-mix(in srgb, var(--graphite-soft) 80%, transparent);
   padding: 28px;
   border: 1px solid var(--line);
   min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 380ms ease, box-shadow 380ms ease, border-color 380ms ease;
+  transition: transform 380ms ease, box-shadow 380ms ease, border-color 380ms ease, background 380ms ease;
+}
+
+.project-card::before,
+.education-card::before,
+.skill-map-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sage), transparent);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 420ms ease;
 }
 
 .project-card:hover {

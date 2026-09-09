@@ -46,3 +46,13 @@ cards.forEach((card, index) => {
     fill: 'forwards'
   });
 });
+
+const scanFrame = document.querySelector('.scan-frame');
+if (scanFrame) {
+  window.addEventListener('mousemove', (event) => {
+    const x = Math.round((event.clientX / Math.max(window.innerWidth, 1)) * 16 - 8);
+    const y = Math.round((event.clientY / Math.max(window.innerHeight, 1)) * 10 - 5);
+    scanFrame.style.transform = `translate3d(${x * 0.25}px, ${y * 0.25}px, 0)`;
+  });
+}
+
