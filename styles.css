@@ -1017,7 +1017,7 @@ body::after {
 
 .education-card p {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: clamp(12px, 1.4vw, 14px);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1084,7 +1084,7 @@ body::after {
 .curriculum-label {
   font-family: var(--sans);
   color: var(--text-soft);
-  font-size: clamp(18px, 2vw, 22px);
+  font-size: clamp(20px, 2vw, 25px);
   line-height: 1.7;
   border-bottom: 1px solid var(--line);
   padding: 13px 0;
@@ -1174,6 +1174,7 @@ body::after {
   padding: 16px 0 12px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   transition: color 280ms ease, transform 280ms ease, border-color 280ms ease;
 }
@@ -1186,14 +1187,18 @@ body::after {
 
 .contact-label {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: clamp(13px, 1.5vw, 16px);
   color: var(--sage-dark);
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.12em;
 }
 
 .contact-value {
   font-family: var(--serif);
-  font-size: clamp(25px, 2vw, 30px);
+  font-size: clamp(27px, 2vw, 34px);
+  color: var(--text-soft);
+  line-height: 1.3;
 }
 
 .contact-cta {
@@ -1342,5 +1347,97 @@ body::after {
   .site-footer,
   .footer-links {
     flex-wrap: wrap;
+  }
+}
+
+/* Direction artistique : contraste noir, rouge et orange, sans vert. */
+:root {
+  --background: #090708;
+  --paper: #151011;
+  --paper-soft: #211517;
+  --panel: #f4e8e4;
+  --text: #fff7f4;
+  --text-soft: #f2deda;
+  --text-muted: #c7aaa5;
+  --line: #71363a;
+  --sage: #ff3b30;
+  --sage-dark: #ff8177;
+  --sage-soft: #ffb0a7;
+  --sage-ink: #160708;
+  --clay: #ff9b54;
+  --clay-light: #ff6b35;
+  --graphite: #090708;
+  --graphite-soft: #1b0d10;
+  --sand: #ffb347;
+  --paper-shadow: rgba(255, 59, 48, 0.2);
+}
+
+body {
+  background:
+    radial-gradient(circle at 80% 5%, rgba(255, 59, 48, 0.22), transparent 18%),
+    radial-gradient(circle at 18% 82%, rgba(255, 107, 53, 0.14), transparent 17%),
+    linear-gradient(135deg, var(--graphite) 0%, var(--graphite-soft) 100%);
+}
+
+body::before {
+  background-image: radial-gradient(rgba(255, 129, 119, 0.3) 0.9px, transparent 0.9px), linear-gradient(90deg, transparent, rgba(255, 59, 48, 0.1), transparent);
+}
+
+body::after {
+  border-color: var(--line);
+  box-shadow: 0 0 80px rgba(255, 59, 48, 0.18) inset;
+}
+
+.site-header {
+  box-shadow: 0 1px 0 rgba(255, 59, 48, 0.34), 0 0 34px rgba(255, 59, 48, 0.08);
+}
+
+.brand-mark {
+  border-color: var(--red, #ff3b30);
+}
+
+.mark-line,
+.status-dot {
+  background: var(--sage);
+}
+
+.project-grid {
+  align-items: stretch;
+}
+
+.project-card {
+  min-height: 330px;
+}
+
+.project-note {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 16px 0 0;
+}
+
+.skill-lines span,
+.timeline-tags span,
+.project-tags span {
+  font-size: 12px;
+}
+
+.skill-category {
+  font-size: clamp(25px, 2vw, 30px);
+}
+
+.education-card h3 {
+  font-size: clamp(28px, 2vw, 40px);
+}
+
+@media (max-width: 760px) {
+  .project-card {
+    min-height: 0;
+  }
+
+  .contact-link {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
