@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Local extraction artifacts
+cv_text.txt
+letter_text.txt
+
+# Dependency/cache folders if used later
+node_modules/
+dist/
+build/
+.cache/
