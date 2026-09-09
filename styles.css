@@ -302,7 +302,7 @@ body::after {
 
 .section-kicker {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sage-dark);
@@ -933,7 +933,7 @@ body::after {
 
 .education-date {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--sage-dark);
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -950,7 +950,7 @@ body::after {
 
 .education-card p {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1017,8 +1017,8 @@ body::after {
 .curriculum-label {
   font-family: var(--sans);
   color: var(--text-soft);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.6;
   border-bottom: 1px solid var(--line);
   padding: 13px 0;
   transition: color 300ms ease, transform 300ms ease, border-color 300ms ease;
@@ -1119,14 +1119,14 @@ body::after {
 
 .contact-label {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--sage-dark);
   text-transform: uppercase;
 }
 
 .contact-value {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: clamp(25px, 2vw, 30px);
 }
 
 .contact-cta {
