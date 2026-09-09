@@ -5,16 +5,17 @@
 }
 
 :root {
-  --background: #eef5ee;
-  --paper: #fffefb;
-  --paper-soft: #eaf0e7;
-  --text: #dce9dd;
-  --text-soft: #b4c0ab;
-  --text-muted: #a8b1a3;
-  --line: #8aa184;
-  --sage: #acdfb4;
-  --sage-dark: #9cc293;
-  --sage-soft: #d6e2d9;
+  --background: #071a11;
+  --paper: #121c15;
+  --paper-soft: #16251d;
+  --panel: #dce5d8;
+  --text: #eef8ee;
+  --text-soft: #d8e6d9;
+  --text-muted: #aab3a7;
+  --line: #96b191;
+  --sage: #9fdca9;
+  --sage-dark: #ccecc6;
+  --sage-soft: #d8ead9;
   --sage-ink: #071a10;
   --clay: #bba779;
   --clay-light: #d4af68;
@@ -824,9 +825,9 @@ body::after {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--graphite);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), inset 0 0 12px rgba(172,223,180,0.05);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.14), inset 0 0 12px rgba(172,223,180,0.12);
 }
 
 .project-section {
