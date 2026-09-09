@@ -1543,3 +1543,14 @@ body::after {
   color: var(--text);
   border-color: var(--text);
 }
+
+/* Le contenu reste lisible même avant le déclenchement des animations. */
+.section,
+.hero,
+.project-card,
+.timeline-item,
+.education-card,
+.skill-map-block {
+  opacity: 1;
+  transform: none;
+}
