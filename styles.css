@@ -5,22 +5,22 @@
 }
 
 :root {
-  --background: #090708;
-  --paper: #151011;
-  --paper-soft: #211517;
+  --background: #edf8ff;
+  --paper: #ffffff;
+  --paper-soft: #e3f3ff;
   --panel: #e9f8fc;
   --text: #fff7f4;
   --text-soft: #f2deda;
   --text-muted: #b8d7df;
   --line: #71363a;
-  --sage: #ff3b30;
-  --sage-dark: #ff8177;
+  --sage: #2563eb;
+  --sage-dark: #0b4f9c;
   --sage-soft: #9ce8ff;
-  --sage-ink: #160708;
+  --sage-ink: #ffffff;
   --clay: #7ddcff;
   --clay-light: #3bbce8;
-  --graphite: #090708;
-  --graphite-soft: #1b0d10;
+  --graphite: #edf8ff;
+  --graphite-soft: #d8efff;
   --sand: #a7e8ff;
   --paper-shadow: rgba(255, 59, 48, 0.2);
   --sans: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
@@ -1352,22 +1352,22 @@ body::after {
 
 /* Direction artistique : contraste noir, rouge et orange, sans vert. */
 :root {
-  --background: #090708;
-  --paper: #151011;
-  --paper-soft: #211517;
+  --background: #edf8ff;
+  --paper: #ffffff;
+  --paper-soft: #e3f3ff;
   --panel: #f4e8e4;
   --text: #fff7f4;
   --text-soft: #f2deda;
   --text-muted: #b8d7df;
   --line: #71363a;
-  --sage: #ff3b30;
-  --sage-dark: #ff8177;
+  --sage: #2563eb;
+  --sage-dark: #0b4f9c;
   --sage-soft: #ffb0a7;
-  --sage-ink: #160708;
+  --sage-ink: #ffffff;
   --clay: #7ddcff;
   --clay-light: #3bbce8;
-  --graphite: #090708;
-  --graphite-soft: #1b0d10;
+  --graphite: #edf8ff;
+  --graphite-soft: #d8efff;
   --sand: #a7e8ff;
   --paper-shadow: rgba(255, 59, 48, 0.2);
 }
@@ -1393,7 +1393,7 @@ body::after {
 }
 
 .brand-mark {
-  border-color: var(--red, #ff3b30);
+  border-color: var(--red, #2563eb);
 }
 
 .mark-line,
@@ -1464,4 +1464,82 @@ body::after {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* Palette finale : bleu ciel, bleu profond, blanc et gris bleuté. */
+:root {
+  --background: #edf8ff;
+  --paper: #ffffff;
+  --paper-soft: #e3f3ff;
+  --panel: #f7fcff;
+  --text: #123451;
+  --text-soft: #285775;
+  --text-muted: #557b95;
+  --line: #abd5eb;
+  --sage: #2563eb;
+  --sage-dark: #0b4f9c;
+  --sage-soft: #0b83c6;
+  --sage-ink: #ffffff;
+  --clay: #38bdf8;
+  --clay-light: #0284c7;
+  --graphite: #edf8ff;
+  --graphite-soft: #d8efff;
+  --sand: #7dd3fc;
+  --paper-shadow: rgba(37, 99, 235, 0.16);
+  --red: #2563eb;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 80% 5%, rgba(125, 211, 252, 0.38), transparent 20%),
+    radial-gradient(circle at 18% 82%, rgba(37, 99, 235, 0.12), transparent 19%),
+    linear-gradient(135deg, var(--graphite) 0%, var(--graphite-soft) 100%);
+}
+
+body::before {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.2) 0.9px, transparent 0.9px), linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.2), transparent);
+}
+
+body::after {
+  border-color: var(--line);
+  box-shadow: 0 0 80px rgba(125, 211, 252, 0.24) inset;
+}
+
+.site-header {
+  background-color: color-mix(in srgb, var(--paper) 88%, transparent);
+  box-shadow: 0 1px 0 rgba(37, 99, 235, 0.22), 0 0 34px rgba(125, 211, 252, 0.16);
+}
+
+.brand-mark {
+  border-color: var(--sage);
+}
+
+.hero,
+.project-card,
+.education-card,
+.skill-map-block,
+.letter-panel {
+  background-color: color-mix(in srgb, var(--paper) 84%, var(--paper-soft));
+}
+
+.scan-frame {
+  background-color: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.18), 0 32px 110px var(--paper-shadow), inset 0 0 20px rgba(125, 211, 252, 0.18);
+}
+
+.scan-sweep {
+  background-image: repeating-linear-gradient(115deg, transparent, transparent 7px, rgba(125, 211, 252, 0.14) 8px);
+}
+
+.primary-button {
+  background: var(--text);
+  color: #ffffff;
+  border-color: var(--text);
+}
+
+.ghost-button,
+.header-button {
+  color: var(--text);
+  border-color: var(--text);
 }
