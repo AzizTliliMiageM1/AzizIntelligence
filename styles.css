@@ -1544,6 +1544,14 @@ body::after {
   border-color: var(--text);
 }
 
+.timeline-tags span,
+.project-tags span {
+  color: #123451;
+  background: #ffffff;
+  border-color: #7dcff0;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.18), inset 0 0 12px rgba(125, 211, 252, 0.12);
+}
+
 /* Le contenu reste lisible même avant le déclenchement des animations. */
 .section,
 .hero,
