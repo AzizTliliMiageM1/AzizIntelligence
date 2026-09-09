@@ -818,12 +818,15 @@ body::after {
 
 .timeline-tags span,
 .project-tags span {
-  background: color-mix(in srgb, var(--paper-soft) 70%, transparent);
+  background: var(--panel);
   border: 1px solid var(--line);
-  padding: 7px 12px;
+  padding: 8px 14px;
   font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text-soft);
+  font-size: 11px;
+  color: var(--graphite);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), inset 0 0 12px rgba(172,223,180,0.05);
 }
 
 .project-section {
@@ -858,7 +861,7 @@ body::after {
 }
 
 .project-card {
-  background-color: color-mix(in srgb, var(--graphite-soft) 80%, transparent);
+  background-color: var(--paper-soft);
   padding: 28px;
   border: 1px solid var(--line);
   min-height: 280px;
@@ -937,7 +940,7 @@ body::after {
 }
 
 .skill-map-block {
-  background: color-mix(in srgb, var(--paper-soft) 70%, transparent);
+  background: var(--paper-soft);
   border: 1px solid var(--line);
   padding: 18px;
   min-height: 170px;
