@@ -1544,6 +1544,70 @@ body::after {
   border-color: var(--text);
 }
 
+/* Palette douce finale : bleu brumeux, bleu gris et blanc. */
+:root {
+  --background: #f3f8fb;
+  --paper: #ffffff;
+  --paper-soft: #eaf3f7;
+  --panel: #f8fcfd;
+  --text: #23445c;
+  --text-soft: #3c647b;
+  --text-muted: #66879a;
+  --line: #c7dfe8;
+  --sage: #5b93ad;
+  --sage-dark: #467b96;
+  --sage-soft: #7cacc0;
+  --sage-ink: #ffffff;
+  --clay: #79b2c8;
+  --clay-light: #6ca5bd;
+  --graphite: #f3f8fb;
+  --graphite-soft: #e4f0f5;
+  --sand: #9bc8d8;
+  --paper-shadow: rgba(75, 126, 151, 0.12);
+  --red: #5b93ad;
+}
+
+body {
+  background:
+    radial-gradient(circle at 80% 5%, rgba(159, 211, 226, 0.24), transparent 20%),
+    radial-gradient(circle at 18% 82%, rgba(91, 147, 173, 0.09), transparent 19%),
+    linear-gradient(135deg, var(--graphite) 0%, var(--graphite-soft) 100%);
+}
+
+body::before {
+  background-image: radial-gradient(rgba(91, 147, 173, 0.15) 0.9px, transparent 0.9px), linear-gradient(90deg, transparent, rgba(159, 211, 226, 0.16), transparent);
+}
+
+body::after {
+  border-color: var(--line);
+  box-shadow: 0 0 80px rgba(159, 211, 226, 0.18) inset;
+}
+
+.site-header {
+  background-color: color-mix(in srgb, var(--paper) 90%, transparent);
+  box-shadow: 0 1px 0 rgba(91, 147, 173, 0.16), 0 0 34px rgba(159, 211, 226, 0.1);
+}
+
+.project-card,
+.education-card,
+.skill-map-block,
+.letter-panel {
+  background-color: color-mix(in srgb, var(--paper) 88%, var(--paper-soft));
+}
+
+.scan-frame {
+  background-color: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 0 1px rgba(91, 147, 173, 0.14), 0 32px 110px var(--paper-shadow), inset 0 0 20px rgba(159, 211, 226, 0.14);
+}
+
+.timeline-tags span,
+.project-tags span {
+  color: #23445c;
+  background: #ffffff;
+  border-color: #afd1de;
+  box-shadow: 0 0 0 1px rgba(159, 211, 226, 0.12), inset 0 0 12px rgba(159, 211, 226, 0.1);
+}
+
 .timeline-tags span,
 .project-tags span {
   color: #123451;
