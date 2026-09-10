@@ -246,6 +246,41 @@ body::after {
   transition: transform 300ms ease, background 300ms ease, color 300ms ease, border 300ms ease, box-shadow 300ms ease;
 }
 
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  color: var(--text);
+  border-color: var(--sage);
+  background: var(--paper);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.language-toggle-current {
+  color: var(--text);
+}
+
+.language-toggle-separator {
+  color: var(--line);
+}
+
 .header-button {
   color: var(--text);
   border: 1px solid var(--text);
