@@ -7,6 +7,7 @@ Portfolio personnel de Aziz Tlili, étudiant en Master 2 MIAGE, orienté Data Sc
 - `index.html` : contenu principal du site et sections de présentation.
 - `styles.css` : système visuel complet et direction artistique.
 - `main.js` : interactions légères de navigation et formulaire.
+- `photo_profile.jpg` : photo de profil affichée sur la page d’accueil.
 - `CV_AZIZ_TLILI_FINAL.pdf` : CV.
 - `LETTRE_MOTIVATION_STAGE_M2_AZIZ_TLILI.pdf` : lettre de motivation.
 
